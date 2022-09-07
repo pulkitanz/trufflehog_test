@@ -17,6 +17,8 @@ jobs:
       run: echo "hello world" > trufflehog-anzx-debug.out
     - name: Commit back to GitHub
       run: |
+        git config --global user.name "pulkitanz"
+        git config --global user.email "pulkit.aggarwal@anz.com"
         git add -A
         git commit -m "Updating some file"
         git push
