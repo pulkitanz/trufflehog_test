@@ -14,7 +14,11 @@ jobs:
       uses: actions/checkout@v2
       with: { ref: main }
     - name: Add files
-      run: echo "hello world" > trufflehog-anzx-${{ github.event.repository.updated_at}}.out
+      run: |
+      mkdir ${{ github.event.repository.updated_at}}
+      cd ${{ github.event.repository.updated_at}}
+      echo "hello world" > trufflehog-anzx-debug.out
+      cd ..
     - name: Commit back to GitHub
       run: |
         git config --global user.name "pulkitanz"
