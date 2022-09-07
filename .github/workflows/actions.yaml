@@ -15,10 +15,9 @@ jobs:
       with: { ref: main }
     - name: Add files
       run: |
-      mkdir ${{ github.event.repository.updated_at}}
-      cd ${{ github.event.repository.updated_at}}
+      mkdir folder
+      cd folder
       echo "hello world" > trufflehog-anzx-debug.out
-      cd ..
     - name: Commit back to GitHub
       run: |
         git config --global user.name "pulkitanz"
