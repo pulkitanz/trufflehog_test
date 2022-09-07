@@ -15,9 +15,9 @@ jobs:
       with: { ref: main }
     - name: Add files
       run: |
-      mkdir folder
-      cd folder
-      echo "hello world" > trufflehog-anzx-debug.out
+        mkdir folder
+        cd folder
+        echo "hello world" > trufflehog-anzx-debug.out
     - name: Commit back to GitHub
       run: |
         git config --global user.name "pulkitanz"
